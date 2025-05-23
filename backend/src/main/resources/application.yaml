@@ -42,3 +42,13 @@ management:
       enabled: "true"
     readinessState:
       enabled: "true"
+
+# Spring Security configuration properties
+spring:
+  security:
+    user:
+      name: ${SECURITY_USER_NAME:admin}
+      password: ${SECURITY_USER_PASSWORD:admin}
+    jwt:
+      secret: ${JWT_SECRET:mysecret}
+      expiration: ${JWT_EXPIRATION:3600000}
